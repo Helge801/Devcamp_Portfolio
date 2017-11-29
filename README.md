@@ -23,3 +23,20 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+> This is a ruby on rails app that allows users to create their own potfolios
+
+### Features
+
+ - Real time chat engine for comments
+ -Blog
+ -Portfolio
+ -Drag and drop interface
+
+ ## Code example
+
+ ```ruby
+ def my_method
+  puts "hi there"
+end
+```
