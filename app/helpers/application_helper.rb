@@ -17,4 +17,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    @copyright = HelgeViewTool::Renderer.copyright 'Bryan Lund', 'all rights reserved'
+  end
+
 end
