@@ -1,3 +1,16 @@
+User.create(email: "hello@hello.com",
+            password: "asdfasdf",
+            password_confirmation: "asdfasdf",
+            name: "Fake User"
+            )
+
+User.create(email: "goodbye@goodbye.com",
+            password: "asdfasdf",
+            password_confirmation: "asdfasdf",
+            name: "Bryan Lund",
+            roles: "site_admin"
+            )
+
 3.times do |topic|
     Topic.create!(
         title: "topic #{topic}"
