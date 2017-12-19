@@ -7,7 +7,7 @@ User.create(email: "hello@hello.com",
 User.create(email: "goodbye@goodbye.com",
             password: "asdfasdf",
             password_confirmation: "asdfasdf",
-            name: "Bryan Lund",
+            name: "Fake User",
             roles: "site_admin"
             )
 
