@@ -12,7 +12,7 @@
       <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
       <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this post?'} if logged_in?(:site_admin) %>
     </span>
-  </nav>
+  </nav>?
 
   <h5><%= @blog.topic.title %></h5>
 
