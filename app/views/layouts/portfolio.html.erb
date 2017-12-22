@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
@@ -8,6 +9,7 @@
     <META name="keywords" content="<%= @seo_keywords %>" />
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
   </head>
 
   <body>
@@ -18,8 +20,5 @@
     <%= render 'shared/portfolio_footer' %>
 
     <%= alerts %>
-
-    <%= source_helper("portfolio") %>
-
   </body>
 </html>
