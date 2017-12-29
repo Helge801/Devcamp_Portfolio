@@ -1,0 +1,30 @@
+<section class="mid-bracket" id="about-bracket">
+  <div class="container v-fill">
+    <div class="row v-fill">
+      <div class="col-md-6 v-align-contents">
+        <div class="about-info-wrapper">
+          <%= image_tag 'about.jpg' , class: "about-info-img" %>
+          <p class="about-info-text">I am a <span>Ruby-on-Rails</span> developer, with a love for problem solving. After working in electrical and mechanical diagnostics for over ten years I decided it was time to pursue my dream of web and software development. My experience in diagnostics and circuit design has translated easily into coding. 
+            <br><span><%= link_to 'Please take a look at some of my work.', portfolios_path %></span></p>
+        </div>
+      </div>
+      <div class="col-md-6 v-align-contents">
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar my-bar"
+                     role="progress-bar"
+                     aria-valuenow="<%= skill.percent_utilized %>"
+                     aria-valuemax="100"
+                     style=" width: <%= skill.percent_utilized %>%"
+                     ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

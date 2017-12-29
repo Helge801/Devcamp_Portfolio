@@ -1,9 +1,22 @@
 <header class="masthead clearfix">
   <div class="inner">
-    <h3 class="masthead-brand">Bryan Lund</h3>
-    <nav class="nav nav-masthead app-nav">
-    <%= nav_helper 'nav-link', 'span' %>
-    <%= login_helper "nav-link" %>
-    </nav>
+    <div class="app-nav-shell">
+      <div class="app-nav-item">
+        <%= link_to 'Home', root_path %>
+      </div>
+      <div class="app-nav-spacer"></div>
+      <div class="app-nav-item">
+        <%= link_to 'Portfolio', portfolios_path %>
+      </div>
+      <div class="app-nav-spacer"></div>
+      <div class="app-nav-item">
+        <%= link_to 'About-me', about_me_path %>
+      </div>
+      <div class="app-nav-spacer"></div>
+      <div class="app-nav-item">
+        <%= link_to 'Contact', contact_path %>
+      </div>
+      <span class="app-nav-stretch"></span>
+    </div>
   </div>
 </header>

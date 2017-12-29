@@ -4,6 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Raleway" rel="stylesheet">
 
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
@@ -14,27 +15,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <%= video_tag(
-            'keyboard.mp4',
-            id: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true
-          ) %>
-          <%= render 'shared/application_nav'%>
-          <%= yield %>
-          <%= render 'shared/application_footer' %>
-
-          <%= alerts %>
-
-        </div>
-      </div>
+    <%= yield %>
+    <%= alerts %>
+    <div class="container">
+      <%= render 'shared/application_footer' %>
+      <%= render 'shared/application_nav'%>
     </div>
+
   </body>
 </html>

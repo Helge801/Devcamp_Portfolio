@@ -1,0 +1,29 @@
+<section class="fexible-bracket" id="portfolio-bracket">
+  <div class="container v-fill">
+    <div class="row skill-icon-wrapper">
+      <div class="col-md-12">
+        <div class="skill-icon-div">
+          <%= link_to 'All', portfolios_path, class: "skill-icon" %>
+        </div>
+        <% @skills.each do |skill| %>
+          <div class="skill-icon-div">
+            <%= link_to skill.title, portfolios_path, class: "skill-icon" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bottom-pad">
+        <div class="album text-muted">
+          <div class="container">
+            <%= source_helper("alert alert-warning") %>
+            <%= link_to 'Create new Portfolio Item', new_portfolio_path if logged_in?(:site_admin) %>
+            <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
+              <%= render partial: 'portfolio_item', collection: @portfolios %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
