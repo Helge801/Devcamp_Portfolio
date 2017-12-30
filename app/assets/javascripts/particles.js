@@ -1503,7 +1503,7 @@ window.particlesJS = function(tag_id, params){
 
   /* create canvas element */
   var canvas_el = document.createElement('canvas');
-  canvas_el.className = pJS_canvas_class;
+  canvas_el.className = (pJS_canvas_class + ' Backgound-color-anim-2s');
 
   /* set size canvas */
   canvas_el.style.width = "100%";

@@ -358,6 +358,7 @@ body {
 
 .about-info-img {
   height: 300px;
+  animation: fade-slide-right 1s ease 2s normal;
 }
 
 /*======For testing====*/
@@ -404,6 +405,36 @@ body {
 #contact-bracket {
 
 }
+
+/*==================== My Animations Begin ====================*/
+
+.Backgound-color-anim-1s {
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+.Backgound-color-anim-2s {
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+.Backgound-color-anim-3s {
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+@keyframes fade-slide-right {
+  0% {
+    transform: translateX(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/*==================== My Animations End ====================*/
 
 /*======Main Nav======*/
 
