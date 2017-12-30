@@ -328,6 +328,30 @@ body {
   padding-bottom: 100px;
 }
 
+.contact-text {
+
+}
+
+.contact-text span {
+  font-size: 2em;
+  color: var(--color-background-light);
+}
+
+.contact-btn-wrapper {
+  align-content: left;
+  text-align: left;
+}
+
+.contact-btn {
+  background-color: var(--color-background-light);
+  border-color: var(--color-background-light);
+}
+
+.contact-btn:hover {
+  background-color: var(--color-background-dark);
+  color: var(--color-background-light);
+  border-color: var(--color-background-light);
+}
 
 
 /*======img======*/
@@ -364,7 +388,7 @@ body {
 
 .mid-bracket {
   height: 100vh;
-  min-height: 100vh;
+  min-height: 900px;
   width: 100%;
   overflow: hidden;
 }
@@ -375,6 +399,10 @@ body {
 
 #portfolio-bracket {
   background-color: var(--color-background-light);
+}
+
+#contact-bracket {
+  background-color: var(--color-background-dark);
 }
 
 /*======Main Nav======*/
