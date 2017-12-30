@@ -39,6 +39,3 @@
   });
 });
 
-
-
-//TODO: need to get the scroll link working a bit better
