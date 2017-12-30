@@ -20,5 +20,7 @@
 //= require cable
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets
 //= require particles.js
+//= require app.js
+//= require bootstrap-sprockets
+
