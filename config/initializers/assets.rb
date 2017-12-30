@@ -17,4 +17,3 @@ Rails.application.config.assets.precompile += %w( portfolios.scss )
 
 Rails.application.config.assets.precompile += %w( particles.js )
 Rails.application.config.assets.precompile += %w( app.js )
-Rails.application.config.assets.precompile += %w( style.css )

@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require particles.js
 //= require jquery3
 //= require popper
 //= require rails-ujs
@@ -21,21 +22,12 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-//= require particles.js
 
-
-  $(document).ready(function() {
-    $('.test-button').hover(function() {
-      $(this).html('<a href="/about-me"></a>');
-    }, function() {
-      $(this).html('About');
-    });
-  });
 
   $(function() {
-  $("a[href^='#']").on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 300, 'easeInOutQuad');
+    $("a[href^='#']").on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 300, 'easeInOutQuad');
+    });
   });
-});
 
