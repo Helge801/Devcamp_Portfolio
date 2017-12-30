@@ -21,6 +21,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require particles.js
 
 
   $(document).ready(function() {
