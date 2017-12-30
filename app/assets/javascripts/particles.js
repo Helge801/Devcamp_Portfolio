@@ -7,19 +7,6 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
-
-
-  $(function() {
-    $("a[href^='#']").on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 300, 'easeInOutQuad');
-    });
-  });
-
-
-
-
-
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
