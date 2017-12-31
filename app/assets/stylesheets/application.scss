@@ -380,6 +380,22 @@ body {
 
 /*======Brackets======*/
 
+.top-bracket-spacer {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.top-bracket {
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
 .fexible-bracket {
   height: fit-content;
   min-height: 100vh;
@@ -476,6 +492,75 @@ body {
   text-align: justify;
   width: 100%;
 }
+
+.no-click {
+  pointer-events: none;
+}
+
+.title-wrapper-div {
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.title-wrapper-div h1 span {
+  color: var(--color-background-light);
+}
+
+.title-wrapper-div h1:hover span::before {
+  color: var(--color-background-light);
+  content: "Helge801          "
+}
+
+.title-wrapper-div h1 span::before {
+  color: var(--color-background-light);
+  content: "Bryan Lund"
+}
+
+//==========Cover Button Start==========
+
+.cover-button {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid var(--color-background-light);
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  color: var(--color-background-light);
+  background-color: transparent;
+  z-index: 5;
+}
+
+.cover-button:hover {
+  color: var(--color-background-dark);
+}
+
+.cover-button::after {
+  position: absolute;
+  transition: 300ms;
+  content: '';
+  width: 0px;
+  left: -10%;
+  bottom: 0px;
+  height: 100%;
+  background: var(--color-background-light);
+  z-index: -1;
+  transform: skewX(15deg);
+}
+
+.cover-button:hover::after {
+  width: 120%;
+  left: -10px;
+}
+
+.cover-button:focus {
+  outline: none;
+}
+
+//==========Cover Button Start==========
 
 /*==========Animation==========*/
 canvas {
