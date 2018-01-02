@@ -1,6 +1,21 @@
 <div class="col-md-4 no-padding">
   <div class="portfolio_item_card" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+    <div class="portfolio_thumb_back fill">
+      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+    </div>
+    <div class="portfolio_thumb_content fill">
+      <div class="thumb-title-div">
+        <h1><%= portfolio_item.title %></h1>
+        <p><%= portfolio_item.subtitle %></p>
+      </div>
+      <a href="portfolio/<%= portfolio_item.id %>"><button class="thumb-button">View Project</button></a>
+      <div class="tech-used-div">
+        <span>Tech:</span>
+        <% portfolio_item.technologies.each do |tech| %>
+          <li><%= tech.name %></li>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
