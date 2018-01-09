@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219224533) do
+ActiveRecord::Schema.define(version: 20180109013401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,20 +60,17 @@ ActiveRecord::Schema.define(version: 20171219224533) do
     t.integer "position"
   end
 
+  create_table "portfolios_skills", id: false, force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "portfolio_id", null: false
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string "title"
     t.integer "percent_utilized"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "badge"
-  end
-
-  create_table "technologies", force: :cascade do |t|
-    t.string "name"
-    t.bigint "portfolio_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -104,5 +101,4 @@ ActiveRecord::Schema.define(version: 20171219224533) do
   add_foreign_key "blogs", "topics"
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
-  add_foreign_key "technologies", "portfolios"
 end

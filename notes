@@ -1,0 +1,9 @@
+========== TODO: remove Technologies model ==========
+========== TODO: add many to many relationship between Porfolios and Skills ==========
+TODO: adjust seeds file to include relationship between ports and skills
+TODO: create filter function for portfolio Items on home page
+TODO: Create animation classes for animating objects on scroll
+TODO: Create color change event on scroll that only happens if the skills page it shown for a while
+TODO: Create animated slide in to invite people to view "admin" side of site
+TODO: Create tour of admin side
+TODO: Add active nav bar indicator 
