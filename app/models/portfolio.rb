@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  has_and_belongs_to_many :skill
   validates_presence_of :title, :body
 
   mount_uploader :thumb_image, PortfolioUploader

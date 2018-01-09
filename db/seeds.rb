@@ -48,6 +48,21 @@ puts "5 skills created"
     )
 end
 
+skill_count = Skill.count
+port_count = Portfolio.count
+(skill_count * 3).times do |i|
+    loop do
+        added = false
+        rand_skill = Skill.find([*1..skill_count].sample)
+        rand_port = Portfolio.find([*1..port_count].sample)
+        if !rand_port.skill.to_a.include?(rand_skill)
+            rand_port.skill << rand_skill
+            added = true
+        end
+        break if added
+    end
+end
+
 1.times do |port|
   Portfolio.create!(
     title: "Portfolio #{port}",
