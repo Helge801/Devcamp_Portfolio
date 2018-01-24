@@ -5,6 +5,7 @@
         <div class="skill-icon-div">
           <%= link_to 'All', portfolios_path, class: "skill-icon" %>
         </div>
+        <button id="filter_buttom" class="btn btn-primary btn-large">filter</button>
         <% @skills.each do |skill| %>
           <div class="skill-icon-div">
             <%= link_to skill.title, portfolios_path, class: "skill-icon" %>

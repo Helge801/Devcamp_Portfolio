@@ -17,3 +17,12 @@ $(function() {
        e.preventDefault();
   });
 });
+
+$(function() {
+  $(".skill-icon").click(function(e) {
+    skill = $(this).text();
+    $('.port-case').hide();
+    $('[data-' + skill + '="true"]').show();
+    e.preventDefault();
+  });
+});

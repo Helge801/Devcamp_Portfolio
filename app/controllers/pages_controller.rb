@@ -3,6 +3,10 @@ class PagesController < ApplicationController
     @posts = Blog.all
     @skills = Skill.all
     @portfolios = Portfolio.all
+    @skill_list = []
+    @skills.each do |s|
+      @skill_list.push(s.title)
+    end
   end
 
   def about

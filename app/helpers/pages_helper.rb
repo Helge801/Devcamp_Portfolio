@@ -1,5 +1,13 @@
 module PagesHelper
 
+  def port_data portfolio
+    skill_data = ""
+    portfolio.skill.each do |skill|
+      skill_data += "data-#{skill.title}=true ".html_safe
+    end
+    skill_data
+  end 
+
   def twitter_parser tweet
 
         regex = %r{
