@@ -702,10 +702,10 @@ canvas {
 
 .animation-element.slide-left {
   opacity: 0;
-  -moz-transition: all 500ms linear;
-  -webkit-transition: all 500ms linear;
-  -o-transition: all 500ms linear;
-  transition: all 500ms linear;
+  -moz-transition: all 500ms 500ms linear;
+  -webkit-transition: all 500ms 500ms linear;
+  -o-transition: all 500ms 500ms linear;
+  transition: all 500ms 500ms linear;
   -moz-transform: translate3d(-100px, 0px, 0px);
   -webkit-transform: translate3d(-100px, 0px, 0px);
   -o-transform: translate(-100px, 0px);

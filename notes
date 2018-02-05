@@ -2,7 +2,7 @@
 ========== TODO: added many to many relationship between Porfolios and Skills ===========
 ========== TODO: adjust seeds file to include relationship between ports and skills =====
 ========== TODO: create filter function for portfolio Items on home page ================
-TODO: Make a more frofisional looking nav bar
+========== TODO: Make a more frofisional looking nav bar ================================
 TODO: make a place to add skills
 TODO: make it possible to add skills tp port items
 TODO: Create animation classes for animating objects on scroll

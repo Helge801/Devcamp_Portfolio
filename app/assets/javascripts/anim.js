@@ -8,35 +8,33 @@
   // });
 
 //========== Animate Scroll-Point links ==========//
-var $window = $(window);
-var $animation_elements = $('.animation-element');
 
-  $window.trigger('scroll');
-  $window.on('scroll resize', check_if_in_view());
+$(function() {
+  console.log("fisrt function ran");
+  $('body').on('scroll',function() {
+    var window_height = $(window).height();
+    var window_top_position = $('body').scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+    var $animation_elements = $('.animation-element');
+    console.log(window_top_position + " - " + window_bottom_position);
+    $.each($animation_elements, function() {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = (element_top_position + element_height);
 
-function check_if_in_view() {
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = (window_top_position + window_height);
+      console.log(" >> " + ($('body').scrollTop() + element_top_position) + " - " + ($('body').scrollTop() + element_bottom_position));
 
-  $.each($animation_elements, function() {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
-
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
-      $element.addClass('in-view');
-    } else {
-      $element.removeClass('in-view');
-    }
+      //check to see if this current container is within viewport
+      if ((($('body').scrollTop() + element_bottom_position) >= window_top_position) &&
+          (($('body').scrollTop() + element_top_position) <= window_bottom_position)) {
+        $element.addClass('in-view');
+      } else {
+        $element.removeClass('in-view');
+      }
+    });
   });
-}
-
-
-
+});
 
 $(function() {
   $("a[href^='#']").click(function(e) {
