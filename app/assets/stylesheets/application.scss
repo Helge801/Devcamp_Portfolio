@@ -99,6 +99,23 @@ body {
 
 .masthead {
   margin-bottom: 2rem;
+  background-color: var(--color-darkest);
+}
+
+.masthead:hover:after {
+  height: 15px;
+  transform: translateY(5px);
+}
+
+.masthead:after {
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: white;
+  transform: translateY(0px);
+  transition: height 300ms, transform 300ms;
 }
 
 .masthead-brand {
@@ -291,6 +308,10 @@ body {
 
 .v-fill {
   height: 100%;
+}
+
+.h-fill {
+  width: 100%;
 }
 
 .about-info-text {
@@ -532,22 +553,20 @@ body {
 /*======Main Nav======*/
 
 .app-nav-shell {
-
+  display: flex;
+  justify-content: space-around;
 }
 
 .app-nav-item {
-  pointer-events: auto;
-  width: 15%;
-  /*margin: auto;*/
-  display: inline-block;
-  text-align: center;
+  margin: 15px;
 }
 
 .app-nav-item a {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: white;
+  color: var(--color-background-light);
+  font-size: 1.5em;
 }
 
 .app-nav-spacer {
@@ -612,7 +631,6 @@ body {
   transition: .3s;
   color: var(--color-background-light);
   background-color: transparent;
-  z-index: 5;
 }
 
 .cover-button:hover,
