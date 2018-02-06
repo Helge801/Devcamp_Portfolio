@@ -4,7 +4,7 @@
       <div class="col-md-6 v-align-contents">
         <div class="about-info-wrapper">
           <%= image_tag 'about.jpg' , class: "about-info-img animation-element slide-left" %>
-          <p class="about-info-text">I am a <span>Ruby-on-Rails</span> developer, with a love for problem solving. After working in electrical and mechanical diagnostics for over ten years I decided it was time to pursue my dream of web and software development. My experience in diagnostics and circuit design has translated easily into coding. 
+          <p class="about-info-text animation-element slide-left">I am a <span>Ruby-on-Rails</span> developer, with a love for problem solving. After working in electrical and mechanical diagnostics for over ten years I decided it was time to pursue my dream of web and software development. My experience in diagnostics and circuit design has translated easily into coding. 
             <br><span><%= link_to 'Please take a look at some of my work.', '#portfolio-bracket' %></span></p>
         </div>
       </div>
@@ -14,7 +14,7 @@
             <div class="skill animation-element slide-right">
               <h4><%= skill.title %></h4>
               <div class="progress">
-                <div class="progress-bar my-bar"
+                <div class="progress-bar my-bar animation-element"
                      role="progress-bar"
                      aria-valuenow="<%= skill.percent_utilized %>"
                      aria-valuemax="100"
