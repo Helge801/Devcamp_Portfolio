@@ -16,21 +16,24 @@ $(function() {
     var window_top_position = $('body').scrollTop();
     var window_bottom_position = (window_top_position + window_height);
     var $animation_elements = $('.animation-element');
-    console.log(window_top_position + " - " + window_bottom_position);
     $.each($animation_elements, function() {
       var $element = $(this);
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;
       var element_bottom_position = (element_top_position + element_height);
 
-      console.log(" >> " + ($('body').scrollTop() + element_top_position) + " - " + ($('body').scrollTop() + element_bottom_position));
-
-      //check to see if this current container is within viewport
       if ((($('body').scrollTop() + element_bottom_position) >= window_top_position) &&
           (($('body').scrollTop() + element_top_position) <= window_bottom_position)) {
-        $element.addClass('in-view');
+        if (!$element.hasClass('waiting') && !$element.hasClass('in-view')) {
+          $element.addClass('waiting');
+          setTimeout(function() {
+            $element.addClass('in-view');
+            $element.removeClass('waiting');
+          },Math.random() * 1000);
+        }
       } else {
         $element.removeClass('in-view');
+        $element.delay(0);
       }
     });
   });
