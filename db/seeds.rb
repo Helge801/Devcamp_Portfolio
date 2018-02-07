@@ -36,14 +36,23 @@ end
 #     )
 # end
 
-  Skill.create!(title:"JavaScript", percent_utilized: 50)
-  Skill.create!(title:"Ruby", percent_utilized: 70)
-  Skill.create!(title:"SQL", percent_utilized: 40)
-  Skill.create!(title:"Rails", percent_utilized: 70)
-  Skill.create!(title:"HTML/CSS", percent_utilized: 60)
-  Skill.create!(title:"TypeScript", percent_utilized: 40)
-  Skill.create!(title:"Angular", percent_utilized: 38)
-  Skill.create!(title:"C-Sharp", percent_utilized: 30)
+  1 Skill.create!(title:"JavaScript", percent_utilized: 50)
+  2 Skill.create!(title:"Ruby", percent_utilized: 70)
+  3 Skill.create!(title:"SQL", percent_utilized: 40)
+  4 Skill.create!(title:"Rails", percent_utilized: 70)
+  5 Skill.create!(title:"HTML/CSS", percent_utilized: 60)
+  6 Skill.create!(title:"TypeScript", percent_utilized: 40)
+  7 Skill.create!(title:"Angular", percent_utilized: 38)
+  8 Skill.create!(title:"C-Sharp", percent_utilized: 30)
+
+  # Portfolio.last.skill << Skill.find(1)
+  Portfolio.last.skill << Skill.find(2)
+  Portfolio.last.skill << Skill.find(3)
+  Portfolio.last.skill << Skill.find(4)
+  Portfolio.last.skill << Skill.find(5)
+  # Portfolio.last.skill << Skill.find(6)
+  # Portfolio.last.skill << Skill.find(7)
+  # Portfolio.last.skill << Skill.find(8)
 
 puts "8 skills created"
 

@@ -29,6 +29,13 @@ $(function() {
           setTimeout(function() {
             $element.addClass('in-view');
             $element.removeClass('waiting');
+            if ($element.hasClass('port-case')) {
+              setTimeout(function() {
+                $element.removeClass('animation-element');
+                $element.removeClass('in-view');
+                $element.removeClass('slide-top');
+              },1000);
+            }
           },Math.random() * 1000);
         }
       } else {

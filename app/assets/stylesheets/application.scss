@@ -387,7 +387,7 @@ body {
 .portfolio_item_card {
   margin: 0px;
   position: relative;
-  transition: z-index 1s step-end, transform 1s;
+  transition: transform 1s;
 }
 
 .portfolio_thumb_content {
@@ -435,8 +435,8 @@ body {
 
 .portfolio_item_card:hover {
   transform: scale(1.1);
-  z-index: 1;
-  transition: z-index 1s step-start, transform 1s; //TODO: need to fix the z-index delay using animation
+  z-index: 1 !important;
+  transition: transform 1s;
   & > .portfolio_thumb_content {
     background-color: var(--color-washout);
     & > .thumb-title-div{
@@ -702,6 +702,13 @@ canvas {
   font-size: 0.5em;
 }
 
+.animation-element.slide-top {
+  opacity: 0;
+  transition: all 0ms linear;
+  transform: translate3d(0px, 100px, 0px);
+}
+
+
 .animation-element.progress-bar {
   max-width: 0%;
   transition: all 0ms linear;
@@ -724,17 +731,23 @@ canvas {
   transform: translate3d(100px, 0px, 0px);
 }
 
-.animation-element.focus-in {
-  transform: scale(2,2) focus()
-}
-
-.animation-element.in-view {
+.animation-element.slide-right.in-view {
   opacity: 1;
   transition: all 500ms linear;
   transform: translate3d(0px, 0px, 0px);
 }
 
+.animation-element.slide-left.in-view {
+  opacity: 1;
+  transition: all 500ms linear;
+  transform: translate3d(0px, 0px, 0px);
+}
 
+.animation-element.slide-top.in-view {
+  opacity: 1;
+  transition: all 500ms linear;
+  transform: translate3d(0px, 0px, 0px);
+}
 
 // .animation-element.slide-right.in-view {
 //   opacity: 1;
