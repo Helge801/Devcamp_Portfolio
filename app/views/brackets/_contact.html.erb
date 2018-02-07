@@ -9,19 +9,22 @@
 
 
 
-        <form action="#" method="post">
+        <%= form_for @email_message do |form| %>
           <div class="form-group">
-            <input type="email" placeholder="Your email" class="form-control" id="contact-email"></input>
-            <!--           <%= text_field :title, class: 'form-control', placeholder: 'From:' %> -->
+            <%= form.email_field :address, class: "form-control", id: "contact-email" %>
+            <!-- <input type="email" placeholder="Your email" class="form-control" id="contact-email"></input> -->
           </div>
           <div class="form-group">
-            <textarea placeholder="Message" rows="15" class="form-control" id="contact-body"></textarea>
-            <!--           <%= text_area :title, class: 'form-control', placeholder: 'Message', rows: 30 %> -->
+            <%= form.text_area :message, class: "form-control", id: "contact-body", rows: 15 %>
+            <!-- <textarea placeholder="Message" rows="15" class="form-control" id="contact-body"></textarea> -->
           </div>
           <div class="form-group contact-btn-wrapper">
-            <button type="submit" class="btn btn-primary contact-btn">Send</button>
+            <%= form.submit 'Send email', class: "btn btn-primary contact-btn" %>
+            <!-- <button type="submit" class="btn btn-primary contact-btn">Send</button> -->
           </div>
         </div>
-      </form>
+      <% end %>
+
+
     </div>
 </section>

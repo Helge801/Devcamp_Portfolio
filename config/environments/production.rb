@@ -91,5 +91,14 @@ Rails.application.configure do
 
   config.action_cable.allowed_request_origins = ['https://helge-devcamp-portfolio.herokuapp.com', 'http://devcamp-portfolio.herokuapp.com']
   config.action_cable.url = "wss://helge-devcamp-portfolio.herokuapp.com/cable"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    user_name:            ENV['MY_EMAIL'],
+    password:             ENV['MY_EMAIL_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 end
 

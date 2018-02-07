@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :email_messages
+
   mount ActionCable.server => '/cable'
   
   root to: 'pages#home'

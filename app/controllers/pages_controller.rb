@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     @skills.each do |s|
       @skill_list.push(s.title)
     end
+    @email_message = EmailMessage.new
   end
 
   def about
