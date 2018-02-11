@@ -3,9 +3,8 @@
     <div class="row skill-icon-wrapper">
       <div class="col-md-12">
         <div class="skill-icon-div">
-          <%= link_to 'All', portfolios_path, class: "skill-icon" %>
+          <%= link_to 'All', portfolios_path, class: "all-skill-icon selected" %>
         </div>
-        <button id="filter_buttom" class="btn btn-primary btn-large">filter</button>
         <% @skills.each do |skill| %>
           <div class="skill-icon-div">
             <%= link_to skill.title, portfolios_path, class: "skill-icon" %>
