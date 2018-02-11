@@ -1,11 +1,3 @@
-  // $(function() {
-  //   $("a[href^='#']").on('click', function(e) {
-  //     console.log('working');
-  //     $('body').animate({
-  //       scrollTop: $($(this).attr('href')).offset().top }, 300, 'easeInOutQuad');
-  //     e.preventDefault();
-  //   });
-  // });
 
 //========== Animate Scroll-Point links ==========//
 
@@ -46,6 +38,7 @@ $(function() {
   });
 });
 
+// Animate scroll to anchor points for brackets on home page
 $(function() {
   $("a[href^='#']").click(function(e) {
        var elementClicked = $(this).attr("href");
@@ -55,11 +48,25 @@ $(function() {
   });
 });
 
+// Filter Portfolio Cards based on selected skill
 $(function() {
   $(".skill-icon").click(function(e) {
-    skill = $(this).text();
+    $('.skill-icon.selected').removeClass('selected');
+    $('.all-skill-icon.selected').removeClass('selected');
+    $(this).addClass('selected');
+    let skill = $(this).text();
     $('.port-case').hide();
     $('[data-' + skill + '="true"]').show();
+    e.preventDefault();
+  });
+});
+
+//Show all portfolio cards
+$(function() {
+  $(".all-skill-icon").click(function(e) {
+    $('.skill-icon.selected').removeClass('selected');
+    $(this).addClass('selected');
+    $('.port-case').show();
     e.preventDefault();
   });
 });
