@@ -24,11 +24,13 @@
   --color-light: #1bb186;
   --color-lightest: #aa9784;
 
-  --color-background-dark: #656565;
-  --color-background-light: #1bb186;
+  // --color-background-dark: #656565;
+  --color-background-dark: #474747;
+  --color-background-light: #21ce9c;
+  // --color-background-light: #1bb186;
 
   // --color-washout: rgba(255,255,255,0.5);
-  --color-washout: rgba(0,0,0,0.5);
+  --color-washout: rgba(0,0,0,0.6);
 
   --font-family-heading: 'Amaranth', sans-serif;
   --font-family-body: 'Raleway', sans-serif;
@@ -510,7 +512,7 @@ body {
 }
 
 #about-bracket {
-/*  background-color: var(--color-background-dark);*/
+  // background-color: lightblue;
 }
 
 #portfolio-bracket {
